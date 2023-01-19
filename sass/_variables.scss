@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'breakpoints';
+@import 'typography';
 
 //Text colors
 $text-colors: (
@@ -17,14 +18,14 @@ $backgrounds: (
 
 //Border colors
 $borders: (
-  "border-blue": $blue-3
+  "border-blue": $blue-3,
   "border-gray": $gray-2
 );
 
 //Shadow colors
 $shadows: (
-  $shadow-blue: $blue-1,
-  $shadow-gray: $gray-1
+  "shadow-blue": $blue-1,
+  "shadow-gray": $gray-1
 );
 
 //Screen breakpoints
@@ -35,3 +36,6 @@ $breakpoints: (
   "xl": $screen-xl-min,
   "xxl": $screen-xxl-min
 );
+
+//Font
+$font: Roboto;

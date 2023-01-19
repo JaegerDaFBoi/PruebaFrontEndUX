@@ -1,0 +1,61 @@
+@use "variables" as *;
+
+// Used to define blocks as FlexContainers
+@mixin flexbox($direction: row, $x-align, $justify) {
+  display: flex;
+  flex: {
+    direction: $direction;
+  }
+  align-items: $x-align;
+  justify-content: $justify;
+}
+
+// Used to define background images of an element
+@mixin images($img) {
+  background-image: url($img);
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Used to define texts
+@mixin text($style, $variant, $weight, $size, $lineheight) {
+  font-style: $style;
+  font-variant: $variant;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineheight;
+  font-family: $font;
+}
+
+//Media queries mixins for each breakpoint
+@mixin sm {
+  @media screen and (min-width: #{map-get($breakpoints, "sm")}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: #{map-get($breakpoints, "md")}) {
+    @content
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: #{map-get($breakpoints, "lg")}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: #{map-get($breakpoints, "xl")}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media screen and (min-width: #{map-get($breakpoints, "xxl")}) {
+    @content;
+  }
+}
+
