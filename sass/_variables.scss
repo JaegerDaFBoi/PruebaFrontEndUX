@@ -1,0 +1,37 @@
+@import 'colors';
+@import 'breakpoints';
+
+//Text colors
+$text-colors: (
+  "text-white": $white,
+  "text-dark": $gray-3,
+  "text-red": $red
+);
+
+//Backgroun colors
+$backgrounds: (
+  "bg-white": $white,
+  "bg-blue": $blue-3,
+  "bg-dark": $gray-4
+);
+
+//Border colors
+$borders: (
+  "border-blue": $blue-3
+  "border-gray": $gray-2
+);
+
+//Shadow colors
+$shadows: (
+  $shadow-blue: $blue-1,
+  $shadow-gray: $gray-1
+);
+
+//Screen breakpoints
+$breakpoints: (
+  "sm": $screen-sm-min,
+  "md": $screen-md-min,
+  "lg": $screen-lg-min,
+  "xl": $screen-xl-min,
+  "xxl": $screen-xxl-min
+);
