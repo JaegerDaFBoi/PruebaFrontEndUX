@@ -1,0 +1,411 @@
+@use "variables" as *;
+@use "mixins";
+
+//Header Styles
+header {
+  @include mixins.images($img: "../assets/img/plane.jpg");
+  width: 100%;
+  height: 320px;
+  padding: {
+    top: 5px;
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+  }
+  box-sizing: border-box;
+  color: map-get($map: $text-colors, $key: "text-white");
+
+  .header_lang {
+    width: 50%;
+    height: 15px;
+    margin-left: 50%;
+    margin-bottom: 5px;
+    position: relative;
+    @include mixins.flexbox($x-align: flex-start, $justify: flex-end);
+
+    .header_lang--text {
+      box-sizing: border-box;
+      text-align: left;
+      margin: 0;
+      width: auto;
+      @include mixins.text(normal, normal, normal, 16px, 16px);
+    }
+
+    .header_lang--dropdown {
+      display: none;
+      position: absolute;
+      background-color: map-get($map: $backgrounds, $key: "bg-white");
+      color: map-get($map: $text-colors, $key: "text-blue");
+      top: 30px;
+      padding: {
+        top: 10px;
+        bottom: 10px;
+        left: 15px;
+        right: 15px;
+      }
+      box-sizing: border-box;
+      border-radius: 10px;
+
+      .arrow {
+        width: 0;
+        height: 0;
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-bottom: 15px solid #ffffff;
+        position: absolute;
+        left: 90px;
+        bottom: 68px;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        @include mixins.text(normal, normal, normal, 16px, 16px);
+
+        li {
+          margin-bottom: 2px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:hover .header_lang--dropdown {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  .header_menu {
+    @include mixins.flexbox(
+      $direction: column,
+      $x-align: flex-start,
+      $justify: center
+    );
+
+    .header_menu--title {
+      @include mixins.text(normal, normal, bold, 36px, 43px);
+      margin: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      box-sizing: border-box;
+      @include mixins.text(normal, normal, normal, 16px, 20px);
+
+      li {
+        display: inline;
+        margin-left: 6px;
+        cursor: pointer;
+
+        a {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .active {
+        border-bottom: 2px solid $white;
+      }
+    }
+  }
+
+  .header_info {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+
+    .header_info--text {
+      margin-bottom: 20px;
+      text-align: left;
+
+      h3 {
+        @include mixins.text(normal, normal, normal, 18px, 22px);
+        margin: {
+          top: 8px;
+          bottom: 8px;
+        }
+      }
+
+      p {
+        margin: 0;
+        @include mixins.text(normal, normal, normal, 14px, 16px);
+      }
+    }
+
+    .header_info--button {
+      width: 150px;
+      height: 30px;
+      padding: {
+        top: 5px;
+        bottom: 3px;
+      };
+      background-color: map-get($map: $backgrounds, $key: "bg-red");
+      color: map-get($map: $text-colors, $key: "text-white");
+      outline: none;
+      border: none;
+      border-radius: 30px;
+      @include mixins.text(normal, normal, bold, 14px, 16px);
+    }
+  }
+
+  @include mixins.sm {
+    height: 360px;
+    padding: {
+      top: 8px;
+      left: 30px;
+      right: 30px;
+    }
+
+    .header_menu {
+      flex-direction: row;
+      align-items: center;
+      justify-items: right;
+
+      ul {
+        margin: 0;
+        text-align: right;
+      }
+    }
+
+    .header_info {
+      margin-top: 40px;
+      width: 80%;
+
+      .header_info--text {
+        margin-bottom: 25px;
+
+        h3 {
+          font-size: 22px;
+          line-height: 24px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+
+      .header_info--button {
+        width: 170px;
+        height: 35px;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  @include mixins.md {
+    height: 400px;
+    padding: {
+      top: 10px;
+      left: 48px;
+      right: 48px;
+    }
+    
+
+    .header_lang {
+      height: 18px;
+    }
+
+    .header_menu {
+      ul {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    .header_info {
+      margin-top: 50px;
+      width: 90%;
+
+      .header_info--text {
+        margin-bottom: 30px;
+
+        h3 {
+          font-size: 26px;
+          line-height: 28px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+
+      .header_info--button {
+        width: 180px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  @include mixins.lg {
+    height: 440px;
+    padding: {
+      top: 13px;
+      left: 55px;
+      right: 55px;
+    }
+
+    .header_lang {
+      height: 20px;
+
+      .header_lang--text {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      .header_lang--dropdown {
+        .arrow {
+          bottom: 85px;
+        }
+        ul {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .header_info {
+      margin-top: 60px;
+      width: 100%;
+
+      .header_info--text {
+        margin-bottom: 40px;
+
+        h3 {
+          font-size: 28px;
+          line-height: 30px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+
+      .header_info--button {
+        width: 210px;
+        height: 45px;
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  @include mixins.xl {
+    height: 475px;
+    padding: {
+      top: 16px;
+      left: 63px;
+      right: 63px;
+    }
+
+    .header_lang {
+      height: 22px;
+
+      .header_lang--text {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      .header_lang--dropdown {
+        .arrow {
+          bottom: 85px;
+        }
+        ul {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .header_info {
+      margin-top: 80px;
+      width: 50%;
+
+      .header_info--text {
+        margin-bottom: 49px;
+
+        h3 {
+          font-size: 30px;
+          line-height: 37px;
+        }
+
+        p {
+          width: 75%;
+          text-align: left;
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+
+      .header_info--button {
+        width: 233px;
+        height: 50px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  @include mixins.xxl {
+    height: 500px;
+    padding: {
+      top: 20px;
+      left: 68px;
+      right: 68px;
+    }
+
+    .header_lang {
+      height: 24px;
+
+      .header_lang--text {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .header_lang--dropdown {
+        .arrow {
+          bottom: 92px;
+        }
+        ul {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .header_menu {
+      ul {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    .header_info {
+      margin-top: 90px;
+
+      .header_info--text {
+        margin-bottom: 55px;
+
+        h3 {
+          font-size: 38px;
+          line-height: 40px;
+        }
+
+        p {
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}

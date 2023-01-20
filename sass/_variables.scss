@@ -6,14 +6,16 @@
 $text-colors: (
   "text-white": $white,
   "text-dark": $gray-3,
-  "text-red": $red
+  "text-red": $red,
+  "text-blue": $blue-2
 );
 
 //Backgroun colors
 $backgrounds: (
   "bg-white": $white,
   "bg-blue": $blue-3,
-  "bg-dark": $gray-4
+  "bg-dark": $gray-4,
+  "bg-red": $red
 );
 
 //Border colors
