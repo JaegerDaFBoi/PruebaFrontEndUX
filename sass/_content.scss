@@ -187,7 +187,6 @@
               right: 29px;
             };
             border-bottom: 1px solid rgba($color: map-get($text-colors, "text-dark"), $alpha: 0.3);
-            
 
             &::before {
               display: inline-block;
@@ -200,7 +199,9 @@
               margin-right: 10px;
             }
 
-            
+            a {
+              cursor: pointer;
+            }
           }
         }
       }

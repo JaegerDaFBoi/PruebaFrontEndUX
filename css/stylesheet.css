@@ -602,6 +602,9 @@ header .header_info .header_info--button {
   border-color: transparent transparent transparent #247BA0;
   margin-right: 10px;
 }
+.content .content_wrapper .content_menu .content_menu--options ul li a {
+  cursor: pointer;
+}
 @media screen and (min-width: 480px) {
   .content {
     padding-top: 25px;
