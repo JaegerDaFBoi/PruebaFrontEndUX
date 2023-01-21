@@ -745,6 +745,9 @@ footer .footer_info .footer_info--container {
   text-align: left;
   box-sizing: border-box;
 }
+footer .footer_info .footer_info--container a {
+  cursor: pointer;
+}
 footer .footer_info .footer_info--container p {
   margin-bottom: 14px;
 }
