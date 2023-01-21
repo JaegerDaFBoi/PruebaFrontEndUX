@@ -194,6 +194,7 @@ header .header_info .header_info--button {
   font-size: 14px;
   line-height: 16px;
   font-family: Roboto;
+  cursor: pointer;
 }
 @media screen and (min-width: 480px) {
   header {
@@ -468,6 +469,7 @@ header .header_info .header_info--button {
   border-radius: 0 0 15px 15px;
   opacity: 0.9;
   color: #FFFFFF;
+  cursor: pointer;
 }
 .content .content_wrapper .content_offers .content_offers--block .content_offers--description .content_offers--title {
   padding-left: 10px;

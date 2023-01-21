@@ -150,6 +150,7 @@ header {
       border: none;
       border-radius: 30px;
       @include mixins.text(normal, normal, bold, 14px, 16px);
+      cursor: pointer;
     }
   }
 

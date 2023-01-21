@@ -76,6 +76,7 @@
           border-radius: 0 0 15px 15px;
           opacity: 0.9;
           color: map-get($map: $text-colors, $key: "text-white");
+          cursor: pointer;
 
           .content_offers--title {
             padding-left: 10px;
