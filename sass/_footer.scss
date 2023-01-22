@@ -1,7 +1,9 @@
 @use "variables" as *;
 @use "mixins";
 
+// Footer Section Styles
 footer {
+
   width: 100%;
   height: 406px;
   background-color: map-get($map: $backgrounds, $key: "bg-blue");
@@ -15,17 +17,21 @@ footer {
   box-sizing: border-box;
   color: map-get($map: $text-colors, $key: "text-white");
 
+  // Social Links Section
   .footer_social {
+
     width: 100%;
     height: auto;
     text-align: center;
     margin-bottom: 20px;
 
     .footer_social--text {
+
       @include mixins.text(normal, normal, normal, 16px, 20px);
     }
 
     .footer_social--icon {
+
       width: 30px;
       height: 30px;
       padding: 10px;
@@ -33,13 +39,16 @@ footer {
     }
   }
 
+  // Footer Information Section
   .footer_info {
+
     width: 100%;
     height: 150px;
     padding: 0;
     @include mixins.flexbox($direction: row, $x-align: flex-start, $justify: center);
 
     .footer_info--container {
+
       width: 80%;
       height: auto;
       margin: 0 auto;
@@ -55,6 +64,7 @@ footer {
         margin-bottom: 14px;
       }
 
+      // Footer Links Styles
       .footer_info--title {
         @include mixins.text(normal, normal, normal, 16px, 20px);
         color: map-get($map: $text-colors, $key: "text-red");
@@ -70,6 +80,7 @@ footer {
     }
   }
 
+  // Media Queries for each breakpoint
   @include mixins.sm {
     padding: {
       top: 20px;

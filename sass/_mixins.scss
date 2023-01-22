@@ -10,7 +10,7 @@
   justify-content: $justify;
 }
 
-// Used to define background images of an element
+// Used to define background image of an element
 @mixin images($img) {
   background-image: url($img);
   background-color: transparent;

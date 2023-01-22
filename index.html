@@ -6,121 +6,168 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Airline</title>
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/stylesheet.css">
   <!-- FontAwesome Kit -->
   <script src="https://kit.fontawesome.com/eeaf270120.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="full-page-wrapper">
-    <header>
-      <div class="header_lang">
-        <p class="header_lang--text">en<i class="fa-solid fa-chevron-down"></i></span></p>
-        <div class="header_lang--dropdown">
-          <div class="arrow"></div>
+  <!-- Page Header -->
+  <header>
+    <!-- Lang Selector -->
+    <div class="header_lang">
+      <p class="header_lang--text">en<i class="fa-solid fa-chevron-down"></i></span></p>
+      <div class="header_lang--dropdown">
+        <div class="arrow"></div>
+        <ul>
+          <li><a>RU - Russian</a></li>
+          <li><a>DE - German</a></li>
+          <li><a>FR - French</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Lang Selector End -->
+    <!-- Menu -->
+    <div class="header_menu">
+      <h1 class="header_menu--title">AIRLINE</h1>
+      <!-- Menu Navbar -->
+      <ul>
+        <li class="active"><a>Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Destinations</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+      <!-- Menu Navbar End -->
+    </div>
+    <!-- Header Info Section -->
+    <div class="header_info">
+      <div class="header_info--text">
+        <h3>Visit Canadá with prices from $800</h3>
+        <p>
+          Prepare your bags and forget your worries
+          to start enjoying your holidays in this fantastic country.
+        </p>
+      </div>
+      <!-- Header Button -->
+      <button class="header_info--button">BUY NOW</button>
+    </div>
+    <!-- Header Info Section -->
+  </header>
+  <!-- Page Header End -->
+  <!-- Page Content -->
+  <section class="content">
+    <div class="content_title">
+      <h6 class="content_title--text">Offers</h6>
+      <div class="content_title--decorator"></div>
+    </div>
+    <section class="content_wrapper">
+      <!-- Offers Section -->
+      <div class="content_offers">
+        <div class="content_offers--block" id="offer1">
+          <div class="content_offers--description">
+            <p class="content_offers--title">Trip to Moscow</p>
+            <p class="content_offers--price">Price $600,86</p>
+          </div>
+        </div>
+        <div class="content_offers--block" id="offer2">
+          <div class="content_offers--description">
+            <p class="content_offers--title">Trip to Puerto Rico</p>
+            <p class="content_offers--price">Price $600,86</p>
+          </div>
+        </div>
+        <div class="content_offers--block" id="offer3">
+          <div class="content_offers--description">
+            <p class="content_offers--title">Trip to Honduras</p>
+            <p class="content_offers--price">Price $600,86</p>
+          </div>
+        </div>
+        <!-- Destination Input -->
+        <div class="content_destination">
+          <input type="text" disabled>
+          <p class="content_destination--text">Chosen Destination</p>
+        </div>
+      </div>
+      <!-- Offers Section End -->
+      <!-- Menu Section -->
+      <div class="content_menu">
+        <div class="content_menu--options">
+          <h3 class="content_menu--title">Menu</h3>
+          <!-- Menu Options -->
           <ul>
-            <li><a>RU - Russian</a></li>
-            <li><a>DE - German</a></li>
-            <li><a>FR - French</a></li>
+            <li><a>Check-in</a></li>
+            <li><a>Manage My Booking</a></li>
+            <li><a>Search</a></li>
+            <li><a>Destinations</a></li>
+            <li class="no-border"><a>Members</a></li>
           </ul>
         </div>
       </div>
-      <div class="header_menu">
-        <h1 class="header_menu--title">AIRLINE</h1>
-        <ul>
-          <li class="active"><a>Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Destinations</a></li>
-          <li><a>Contact</a></li>
-        </ul>
-      </div>
-      <div class="header_info">
-        <div class="header_info--text">
-          <h3>Visit Canadá with prices from $800</h3>
-          <p>
-            Prepare your bags and forget your worries
-            to start enjoying your holidays in this fantastic country.
-          </p>
-        </div>
-        <button class="header_info--button">BUY NOW</button>
-      </div>
-    </header>
-    <section class="content">
-      <div class="content_title">
-        <h6 class="content_title--text">Offers</h6>
-        <div class="content_title--decorator"></div>
-      </div>
-      <section class="content_wrapper">
-        <div class="content_offers">
-          <div class="content_offers--block" id="offer1">
-            <div class="content_offers--description">
-              <p class="content_offers--title">Trip to Moscow</p>
-              <p class="content_offers--price">Price $600,86</p>
-            </div>
-          </div>
-          <div class="content_offers--block" id="offer2">
-            <div class="content_offers--description">
-              <p class="content_offers--title">Trip to Puerto Rico</p>
-              <p class="content_offers--price">Price $600,86</p>
-            </div>
-          </div>
-          <div class="content_offers--block" id="offer3">
-            <div class="content_offers--description">
-              <p class="content_offers--title">Trip to Honduras</p>
-              <p class="content_offers--price">Price $600,86</p>
-            </div>
-          </div>
-          <div class="content_destination">
-            <input type="text" disabled>
-            <p class="content_destination--text">Chosen Destination</p>
-          </div>
-        </div>
-        <div class="content_menu">
-          <div class="content_menu--options">
-            <h3 class="content_menu--title">Menu</h3>
-            <ul>
-              <li><a>Check-in</a></li>
-              <li><a>Manage My Booking</a></li>
-              <li><a>Search</a></li>
-              <li><a>Destinations</a></li>
-              <li class="no-border"><a>Members</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <!-- Menu Section End -->
     </section>
-    <footer>
-      <div class="footer_social">
-        <p class="footer_social--text">Follow us</p>
-        <a><img src="./assets/img/facebook.png" alt="Logo Facebook" class="footer_social--icon"></a>
-        <a><img src="./assets/img/instagram.png" alt="Logo Instagram" class="footer_social--icon"></a>
-        <a><img src="./assets/img/twitter.png" alt="Logo Twitter" class="footer_social--icon"></a>
+  </section>
+  <!-- Page Footer -->
+  <footer>
+    <!-- Social Links Section -->
+    <div class="footer_social">
+      <p class="footer_social--text">Follow us</p>
+      <a><img src="./assets/img/facebook.png" alt="Logo Facebook" class="footer_social--icon"></a>
+      <a><img src="./assets/img/instagram.png" alt="Logo Instagram" class="footer_social--icon"></a>
+      <a><img src="./assets/img/twitter.png" alt="Logo Twitter" class="footer_social--icon"></a>
+    </div>
+    <!-- Social Links Section End -->
+    <!-- Footer Links Section -->
+    <div class="footer_info">
+      <div class="footer_info--container">
+        <p class="footer_info--title">About Us</p>
+        <a>
+          <p class="footer_info--option">we want to help passengers to reach their destinations</p>
+        </a>
       </div>
-      <div class="footer_info">
-        <div class="footer_info--container">
-          <p class="footer_info--title">About Us</p>
-          <a><p class="footer_info--option">we want to help passengers to reach their destinations</p></a>
-        </div>
-        <div class="footer_info--container">
-          <p class="footer_info--title">Explore</p>
-          <a><p class="footer_info--option">Home</p></a>
-          <a><p class="footer_info--option">Destinations</p></a>
-          <a><p class="footer_info--option">About</p></a>
-        </div>
-        <div class="footer_info--container">
-          <p class="footer_info--title">Information</p>
-          <a><p class="footer_info--option">More search</p></a>
-          <a><p class="footer_info--option">Blog</p></a>
-          <a><p class="footer_info--option">Testimonials</p></a>
-        </div>
-        <div class="footer_info--container">
-          <p class="footer_info--title">Services</p>
-          <a><p class="footer_info--option">Manage My Bookings</p></a>
-          <a><p class="footer_info--option">Checkin</p></a>
-          <a><p class="footer_info--option">Hotel</p></a>
-          <a><p class="footer_info--option">Cars</p></a>
-        </div>
+      <div class="footer_info--container">
+        <p class="footer_info--title">Explore</p>
+        <a>
+          <p class="footer_info--option">Home</p>
+        </a>
+        <a>
+          <p class="footer_info--option">Destinations</p>
+        </a>
+        <a>
+          <p class="footer_info--option">About</p>
+        </a>
       </div>
-    </footer>
+      <div class="footer_info--container">
+        <p class="footer_info--title">Information</p>
+        <a>
+          <p class="footer_info--option">More search</p>
+        </a>
+        <a>
+          <p class="footer_info--option">Blog</p>
+        </a>
+        <a>
+          <p class="footer_info--option">Testimonials</p>
+        </a>
+      </div>
+      <div class="footer_info--container">
+        <p class="footer_info--title">Services</p>
+        <a>
+          <p class="footer_info--option">Manage My Bookings</p>
+        </a>
+        <a>
+          <p class="footer_info--option">Checkin</p>
+        </a>
+        <a>
+          <p class="footer_info--option">Hotel</p>
+        </a>
+        <a>
+          <p class="footer_info--option">Cars</p>
+        </a>
+      </div>
+    </div>
+    <!-- Footer Links Section End -->
+  </footer>
+  <!-- Page Footer End -->
+
 </body>
 
 </html>

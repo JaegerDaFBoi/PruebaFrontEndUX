@@ -1,7 +1,9 @@
 @use "variables" as *;
 @use "mixins";
 
+// Content Block Styles
 .content {
+
   width: 100%;
   height: auto;
   background-color: transparent;
@@ -13,7 +15,9 @@
   }
   box-sizing: border-box;
 
+  // Title Element Styles
   .content_title {
+
     @include mixins.flexbox(
       $direction: row,
       $x-align: flex-start,
@@ -23,7 +27,9 @@
     margin-bottom: 29px;
     padding: 0;
 
+    // Title Text Styles
     .content_title--text {
+
       width: auto;
       margin: 0;
       padding: {
@@ -37,6 +43,7 @@
     }
 
     .content_title--decorator {
+
       height: 50%;
       width: 100%;
       align-self: center;
@@ -44,21 +51,27 @@
     }
   }
 
+  // Offers and Menu Block Section
   .content_wrapper {
+
     @include mixins.flexbox(
       $direction: column,
       $x-align: center,
       $justify: center
     );
 
+    // Offers Section
     .content_offers {
+
       @include mixins.flexbox(
         $direction: column,
         $x-align: center,
         $justify: center
       );
 
+      // Offer Block
       .content_offers--block {
+
         width: 233px;
         height: 207px;
         margin-bottom: 30px;
@@ -67,7 +80,9 @@
         border-radius: 16px;
         box-shadow: 5px 5px 5px map-get($map: $shadows, $key: "shadow-gray");
 
+        // Offer Description 
         .content_offers--description {
+
           position: absolute;
           width: 100%;
           height: 40%;
@@ -78,7 +93,9 @@
           color: map-get($map: $text-colors, $key: "text-white");
           cursor: pointer;
 
+          // Description Texts
           .content_offers--title {
+
             padding-left: 10px;
             padding-bottom: 10px;
             margin: 0;
@@ -89,6 +106,7 @@
           }
 
           .content_offers--price {
+
             padding-left: 35%;
             padding-bottom: 10px;
             padding-right: 16px;
@@ -99,6 +117,7 @@
         }
       }
 
+      // Offer Background Images
       #offer1 {
         @include mixins.images("../assets/img/moscow.jpg");
       }
@@ -112,13 +131,16 @@
       }
     }
 
+    // Destination Input Styles
     .content_destination {
+
       width: 100%;
       height: auto;
       text-align: center;
       padding: 40px;
 
       input {
+
         width: 233px;
         outline: none;
         border: none;
@@ -127,16 +149,21 @@
       }
 
       .content_destination--text {
+
         @include mixins.text(normal, normal, bold, 16px, 19px);
         color: map-get($map: $text-colors, $key: "text-dark");
       }
     }
 
+    // Menu Element Styles
     .content_menu {
+
       width: 100%;
       height: auto;
 
+      // Menu Options Styles
       .content_menu--options {
+
         width: 233px;
         height: 327px;
         margin: 0 auto;
@@ -146,6 +173,7 @@
         border-radius: 15px;
 
         .content_menu--title {
+
           padding: {
             top: 29px;
             bottom: 29px;
@@ -158,6 +186,7 @@
         }
 
         ul {
+
           height: 100%;
           list-style-type: none;
           margin: 0;
@@ -172,10 +201,12 @@
           justify-self: flex-start;
 
           .no-border {
+
             border-bottom: 0px;
           }
 
           li {
+
             display: list-item;
             width: auto;
             height: 40px;
@@ -189,7 +220,9 @@
             };
             border-bottom: 1px solid rgba($color: map-get($text-colors, "text-dark"), $alpha: 0.3);
 
+            // Option Decorator
             &::before {
+
               display: inline-block;
               content: "";
               width: 0;
@@ -201,6 +234,7 @@
             }
 
             a {
+
               cursor: pointer;
             }
           }
@@ -209,6 +243,7 @@
     }
   }
 
+  // Media Queries for each breakpoint
   @include mixins.sm {
     padding: {
       top: 25px;
